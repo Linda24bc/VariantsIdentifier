@@ -1,11 +1,10 @@
-Package: VariantsIdentifier
+Package: Variants Identifier
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Automaitically Identification of Hb variants  
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Yuan lin
+Maintainer: yl17e@my.fsu.edu
+Description: Automaitically search deconvolved mass of experimental MS2 data in the database which contains the diagnostic product ions of Hb variants
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
