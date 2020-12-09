@@ -18,4 +18,5 @@ ref <- read.csv("Hb Variants_ref.csv")
 exp <- read.csv("expt mass_cHbSS.csv")
 ### Run the function and get the results
 ID.results <- Variants.Identifier(ref, exp)
-
+### output the results in .csv
+write.csv(ID.results, "ID_cHbSS.csv", row.names = FALSE)
