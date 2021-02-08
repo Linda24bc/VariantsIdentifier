@@ -13,6 +13,6 @@ Variants.Identifier <- function(ref, exp){
   join <- full_join(exp, ref)
   join$ppm_error=(join$Exp_Mass - join$Ref_Mass)/join$Ref_Mass * (10^6)
   join1 <- filter(join, Exp_rel_abundance > 2 & !is.na(Ref_Mass) & !is.na(Exp_Mass))
-  sort <- join1[with(join1, order(Ion.type, Exp_Mass, Ref_Mass)),]
+  sort <- join1[with(join1, order(Variant, Ion.type, Exp_Mass, Ref_Mass)),]
   re <- sort[,c(4,1,3,5,6,7,8,9,10,11,12)]
 }
