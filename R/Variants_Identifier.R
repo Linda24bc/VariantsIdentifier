@@ -1,4 +1,4 @@
-Variants.Identifier <- function(ref, exp){
+Variants.Identifier <- function(ref, exp, ppm_error_start=-2, ppm_error_end=5){
   exp <- mutate(exp,
                 Exp_rel_abundance = Exp_Intensity/max(exp$Exp_Intensity)*100)
   name.ref <- as.character(ref$Name)
@@ -6,7 +6,7 @@ Variants.Identifier <- function(ref, exp){
   for (i in 1:length(exp$Exp_Mass)){
     for (j in 1:length(ref$Ref_Mass)){
       ppm_error = (exp$Exp_Mass[i] - ref$Ref_Mass[j])/ref$Ref_Mass[j] * (10^6)
-      if (ppm_error <= 10 & ppm_error > -2)
+      if (ppm_error <= ppm_error_end & ppm_error > ppm_error_start)
         exp$Name[i]<- name.ref[j]
     }
   }
