@@ -1,4 +1,4 @@
-Package: Variants Identifier
+Package: VariantIdentifier
 Type: Package
 Title: Automaitically Identification of Hb variants  
 Version: 0.1.0
